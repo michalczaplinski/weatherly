@@ -6,12 +6,19 @@ const access_token =
 // Would make sense to add gzip compression to HTTP calls because the weather data is quite big
 
 export async function handler(event, context, callback) {
-  try {
-    // We assume that the query parameter is always gonna be present in the request
-    const {
-      queryStringParameters: { query }
-    } = event;
+  if (event.httpMethod !== "POST") {
+    return callback("error", {
+      statusCode: 405,
+      body: JSON.stringify({
+        error: "Method Not Allowed",
+        msg: "Allowed Methods: [ POST ]"
+      })
+    });
+  }
 
+  try {
+    // We assume that the query parameter is always gonna be present on the body
+    const query = JSON.parse(event.body).query;
     const searchText = encodeURIComponent(query);
 
     const response = await axios.get(
@@ -25,12 +32,12 @@ export async function handler(event, context, callback) {
   } catch (err) {
     console.log(err); // output to netlify function log
     if (err.response) {
-      callback("error", {
+      return callback("error", {
         statusCode: err.response.status,
         body: err.response.data
       });
     } else {
-      callback("error", {
+      return callback("error", {
         statusCode: 500,
         body: "There was an unexpected error"
       });

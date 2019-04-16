@@ -3,8 +3,8 @@ import axios from "axios";
 const token = "60302a764d39e7a9c131da130128ce78";
 
 export async function handler(event, context, callback) {
-  if (event.httpMethod !== "post") {
-    callback("error", {
+  if (event.httpMethod !== "POST") {
+    return callback("error", {
       statusCode: 405,
       body: JSON.stringify({
         error: "Method Not Allowed",
@@ -14,11 +14,11 @@ export async function handler(event, context, callback) {
   }
 
   try {
-    const latitude = JSON.parse(event.body).latitude;
-    const searchText = encodeURIComponent(latitude);
+    const coords = JSON.parse(event.body).coords;
+    const searchText = encodeURIComponent(coords);
 
     const response = await axios.get(
-      `https://api.darksky.net/forecast/${token}/${searchText}`
+      `https://api.darksky.net/forecast/${token}/${searchText}?units=si&exclude=minutely`
     );
 
     return {
