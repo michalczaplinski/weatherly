@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+/* 
+    This is a convenienece hook that returns the current loading state 
+    and a method for initializing a request.
+*/
+
 export default function useLoading(initialState) {
   const [loadingState, setLoadingState] = useState({
     isLoading: true,

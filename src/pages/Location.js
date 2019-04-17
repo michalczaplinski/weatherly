@@ -78,6 +78,9 @@ const MainInfo = styled.div`
   justify-content: space-around;
   margin-top: 55px;
   margin-bottom: 65px;
+  @media screen and (max-width: 450px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const TemperatureContainer = styled.div`
@@ -102,6 +105,7 @@ const Summary = styled.div`
   @media screen and (max-width: 450px) {
     max-width: 100%;
     margin-left: 20px;
+    margin-top: 35px;
   }
 `;
 
@@ -159,7 +163,7 @@ const Location = ({
           <MainInfo>
             <TemperatureContainer>
               <Icon name={icon} style={{ transform: `scale(1.7)` }} />
-              <div style={{ marginLeft: 15 }}>
+              <div style={{ marginLeft: 25 }}>
                 <Temperature>{formatTemperature(temperature)} </Temperature>
                 <FeelsLike>
                   Feels like {formatTemperature(apparentTemperature)}

@@ -1,9 +1,12 @@
 import axios from "axios";
+import dotenv from "dotenv";
 
-const access_token =
-  "pk.eyJ1IjoibWF0dGZpY2tlIiwiYSI6ImNqNnM2YmFoNzAwcTMzM214NTB1NHdwbnoifQ.Or19S7KmYPHW8YjRz82v6g";
+dotenv.config();
 
-// Would make sense to add gzip compression to HTTP calls because the weather data is quite big
+const access_token = process.env.REACT_APP_MAPBOX_TOKEN;
+
+// It would make sense in the future to add gzip compression to HTTP calls
+// because the weather data is quite big.
 
 export async function handler(event, context, callback) {
   if (event.httpMethod !== "POST") {

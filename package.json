@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "celsius": "^1.0.1",
+    "dotenv": "^7.0.0",
     "downshift": "^3.2.7",
     "lodash.throttle": "^4.1.1",
     "luxon": "^1.12.1",

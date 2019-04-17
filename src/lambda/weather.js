@@ -1,6 +1,8 @@
 import axios from "axios";
+import dotenv from "dotenv";
 
-const token = "60302a764d39e7a9c131da130128ce78";
+dotenv.config();
+const token = process.env.REACT_APP_DARKSKY_TOKEN;
 
 export async function handler(event, context, callback) {
   if (event.httpMethod !== "POST") {

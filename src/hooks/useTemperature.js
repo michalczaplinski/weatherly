@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { toFahrenheitFmt } from "celsius";
 
+/*
+    Custom hook for dealing with temperature conversions
+    Returns a function to format temperature and a callback to 
+    switch the unite type.
+*/
+
 export default function useTemperature() {
   const [celsius, setCelsius] = useState(true);
 
