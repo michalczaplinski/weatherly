@@ -1,7 +1,7 @@
-import React from "react";
+import { useState } from "react";
 
 export default function useLoading(initialState) {
-  const [loadingState, setLoadingState] = React.useState({
+  const [loadingState, setLoadingState] = useState({
     isLoading: true,
     hasError: false,
     response: null

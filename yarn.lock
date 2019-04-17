@@ -2332,6 +2332,11 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
+celsius@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/celsius/-/celsius-1.0.1.tgz#e525a657294a38a8e665d45494483a1bcc4d1168"
+  integrity sha512-OAHLMnm1ghlivaI9+XCgLtc4lzCB3AKuPgBFxSE9P7o9rLV9nmgX+li06QLVvkFTSFRXVTYKt6UrscDWDMZPgw==
+
 chalk@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.1.tgz#18c49ab16a037b6eb0152cc83e3471338215b66e"

@@ -1,4 +1,5 @@
 import React from "react";
+import { withTheme } from "styled-components";
 
 import { ReactComponent as Cloudy } from "../icons/wi-cloudy.svg";
 import { ReactComponent as DayClear } from "../icons/wi-day-sunny.svg";
@@ -38,14 +39,14 @@ const mapIcons = iconName => {
   }
 };
 
-const Icon = ({ name, style, ...props }) => {
+const Icon = ({ name, style, theme, ...props }) => {
   const iconElement = mapIcons(name);
   if (!iconElement) return null;
 
   return React.createElement(iconElement, {
-    style: { width: 100, ...style },
+    style: { width: 100, fill: theme.textColor, ...style },
     ...props
   });
 };
 
-export default Icon;
+export default withTheme(Icon);

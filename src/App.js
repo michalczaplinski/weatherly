@@ -9,7 +9,7 @@ import Location from "./pages/Location";
 const theme = {
   mainColor: "rgb(0, 76, 209)",
   secondaryColor: "#ffe1db",
-  textColor: "rgba(0, 0, 0, 0.8)"
+  textColor: "rgba(0, 0, 0, 0.65)"
 };
 
 const GlobalStyle = createGlobalStyle`

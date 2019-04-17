@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 import Downshift from "downshift";
 import { Redirect } from "react-router-dom";
 
-const fadeIn = keyframes`
+const slideDown = keyframes`
   from {
     transform: translateY(-100%);
   }
@@ -26,7 +26,7 @@ const Layout = styled.div`
   padding: 10px 40px;
   box-shadow: 0px 2px 5px 5px rgba(185, 185, 185, 0.2);
   transform: translateY(50px);
-  animation: ${fadeIn} 600ms ease-in-out;
+  animation: ${slideDown} 600ms ease-in-out;
   transition: transform 400ms ease-in-out;
   ${({ isUnmounting }) => isUnmounting && "transform: translateY(130%)"};
 `;

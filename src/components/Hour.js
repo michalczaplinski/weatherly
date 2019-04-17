@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 import Icon from "./Icon";
 
-const HourContainer = styled.div``;
+const HourContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
 
 const Time = styled.div``;
 
@@ -14,7 +18,7 @@ const Hour = ({ time, iconName, temperature, precipitation }) => (
     <Time>{time}</Time>
     <Icon name={iconName} />
 
-    <Temperature> {temperature} ℃</Temperature>
+    <Temperature> {temperature} </Temperature>
   </HourContainer>
 );
 
