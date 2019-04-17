@@ -1,14 +1,14 @@
 ## FAQ
 
-- Where is the backend?
+#### Where is the backend?
 
-The "backend" is serverless and is using on netlify functions. which are basically AWS Lambda functions.
+The "backend" is serverless and is using Netlify Functions, which are basically AWS Lambda functions.
 
-- Where is the "historical data" for the last 30 days for each location?
+#### Where is the "historical data" for the last 30 days for each location?
   
-I haven't included it in this version of the app, but I'd be happy to add it if you'd like it. I felt like it would require a separate ui / UX flow as the users looking for forecasts and historical data are fundamentally interested in different things.
+I haven't included it in this version of the app, but I'd be happy to add it if you'd like to 🙂. I felt like it would require a separate UI / UX flow as the users looking for forecasts and historical data are fundamentally interested in different things.
 
-### Setup
+## Setup
 
 In order to run the app locally, you'll want to create an .env file with:
 ```
